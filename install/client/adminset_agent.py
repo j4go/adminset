@@ -10,8 +10,8 @@ import time
 import json
 import threading
 
-token = 'HPcWR7l4NJNJ'
-server_ip = '192.168.47.130'
+token = 'mtTSdmgBuaDG'
+server_ip = '192.168.197.174'
 
 try:
     import psutil
