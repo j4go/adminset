@@ -24,6 +24,7 @@ pip install -r requirements.txt
 # /usr/bin/npm config set registry https://registry.npm.taobao.org
 # /usr/bin/npm install --production
 # /usr/bin/npm install forever -g
+# webssh 不更新
 
 if [ $1 ]
 then
