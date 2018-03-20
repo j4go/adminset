@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-
 # 初始化环境目录
 main_dir="/var/opt/adminset"
 adminset_dir="$main_dir/main"
@@ -100,7 +99,7 @@ then
 db1=yes
 fi
 case $db1 in
-	yes|y|Y|YES)  
+	yes|y|Y|YES)
 		echo "installing a new mariadb...."
 		yum install -y mariadb-server mariadb-devel
 		service mariadb start
@@ -127,8 +126,8 @@ case $db1 in
 		sed -i "s/port = 3306/port = $db_port/g" $adminset_dir/adminset.conf
 		sed -i "s/password =/password = $db_password/g" $adminset_dir/adminset.conf
 		;;
-	*) 
-		exit 1                    
+	*)
+		exit 1
 		;;
 esac
 
@@ -143,8 +142,8 @@ case $mongo in
 	yes|y|Y|YES)
 		echo "installing a new Mongodb...."
 		yum install -y mongodb mongodb-server
-		/bin/systemctl start mongod 
-		/bin/systemctl enable mongod 
+		/bin/systemctl start mongod
+		/bin/systemctl enable mongod
 		;;
 	no|n|N|NO)
 		read -p "your Mongodb ip address:" mongodb_ip

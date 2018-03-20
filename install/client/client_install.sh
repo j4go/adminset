@@ -16,7 +16,6 @@ else
     echo "your os version is not supported!"
 fi
 
-
 echo "####install pip mirror####"
 mkdir -p  ~/.pip
 cat <<EOF > ~/.pip/pip.conf
